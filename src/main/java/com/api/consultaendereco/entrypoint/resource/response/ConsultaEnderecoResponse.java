@@ -1,8 +1,9 @@
 package com.api.consultaendereco.entrypoint.resource.response;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ConsultaEnderecoResponse {
 
 	@JsonProperty("cep")
@@ -22,9 +23,6 @@ public class ConsultaEnderecoResponse {
 	@JsonProperty("alerta")
 	private String sAlerta;
 
-	
-	public ConsultaEnderecoResponse() {
-	}
 	public ConsultaEnderecoResponse(String sAlerta) {
 		this.sAlerta = sAlerta;
 	}
