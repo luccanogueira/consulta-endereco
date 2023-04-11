@@ -29,7 +29,11 @@ public class ConsultaEnderecoUseCaseTest {
     @Test
     public void test_Consultar_Sucesso() {
     	
+<<<<<<< HEAD
         CepRequest requestCep = new CepRequest.Builder().cep(CEP_VALIDO).build();
+=======
+        CepRequest requestCep = new CepRequest(CEP_VALIDO);
+>>>>>>> b7cff56f2d0a9082e6a1ed5131973527e687096f
         ConsultaResponse gatewayResponse = new ConsultaResponse();
         gatewayResponse.setCep(CEP_VALIDO);
         gatewayResponse.setLocalidade("São Paulo");
@@ -47,7 +51,11 @@ public class ConsultaEnderecoUseCaseTest {
     @Test
     public void test_Consultar_Cep_Não_Existe() {
         
+<<<<<<< HEAD
     	 CepRequest requestCep = new CepRequest.Builder().cep(CEP_INVALIDO).build();
+=======
+        CepRequest requestCep = new CepRequest(CEP_INVALIDO);
+>>>>>>> b7cff56f2d0a9082e6a1ed5131973527e687096f
         
         ConsultaResponse gatewayResponse = new ConsultaResponse();
         gatewayResponse.setbErro(true);

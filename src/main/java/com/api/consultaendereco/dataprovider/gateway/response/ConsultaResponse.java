@@ -97,5 +97,11 @@ public class ConsultaResponse {
 	public void setSiafi(Boolean bErro) {
 		this.bErro = bErro;
 	}
+	public Boolean getbErro() {
+		return bErro;
+	}
+	public void setbErro(Boolean bErro) {
+		this.bErro = bErro;
+	}
 	
 }

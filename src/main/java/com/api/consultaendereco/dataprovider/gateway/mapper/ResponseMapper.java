@@ -12,7 +12,6 @@ public class ResponseMapper {
 	private static final ArrayList<String> UF_CENTRO_OESTE = new ArrayList<>(Arrays.asList("DF", "GO", "MT", "MS"));
 	private static final ArrayList<String> UF_NORDESTE = new ArrayList<>(Arrays.asList("AL", "BA", "CE", "MA", "PB", "PI", "PE", "RN", "SE"));
 	private static final ArrayList<String> UF_SUL = new ArrayList<>(Arrays.asList("PR", "RS", "SC"));
-	private static final ArrayList<String> UF_NORTE = new ArrayList<>(Arrays.asList("AC", "AP", "AM", "PA", "RO", "RR", "TO"));
 	private static final String ERRO_CONSULTA = "CEP não encontrado. Tente novamente.";
 
 	public static ConsultaEnderecoResponse mapperResponse(ConsultaResponse response) {
