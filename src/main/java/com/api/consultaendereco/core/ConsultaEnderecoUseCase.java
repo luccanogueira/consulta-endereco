@@ -13,7 +13,7 @@ import com.api.consultaendereco.entrypoint.resource.response.ConsultaEnderecoRes
 public class ConsultaEnderecoUseCase {
 
 	@Autowired
-	private ConsultaEnderecoGateway gateway;
+	public ConsultaEnderecoGateway gateway;
 	
 	 public ConsultaEnderecoResponse consultar(CepRequest cep) {
 		 

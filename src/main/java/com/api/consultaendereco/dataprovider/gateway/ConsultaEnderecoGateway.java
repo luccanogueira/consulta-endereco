@@ -10,7 +10,7 @@ import com.api.consultaendereco.dataprovider.gateway.response.ConsultaResponse;
 public class ConsultaEnderecoGateway {
 
 	@Autowired
-	private ConsultaEnderecoClient client;
+	public ConsultaEnderecoClient client;
 	
 	public ConsultaResponse consulta(String cep) {
 		return client.execute(cep);

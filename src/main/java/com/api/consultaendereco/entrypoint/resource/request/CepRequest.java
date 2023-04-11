@@ -10,6 +10,14 @@ public class CepRequest {
 	@NotNull(message = "O campo cep é obrigatório.")
 	private String sCep;
 
+	public CepRequest() {
+	}
+
+	public CepRequest(@NotNull(message = "O campo cep é obrigatório.") String sCep) {
+		super();
+		this.sCep = sCep;
+	}
+
 	public String getsCep() {
 		return sCep;
 	}
@@ -18,21 +26,4 @@ public class CepRequest {
 		this.sCep = sCep;
 	}
 	
-	public static final class Builder {
-		
-		private String sCep;
-		
-		public Builder cep(final String cep) {
-			this.sCep = cep;
-			return this;
-		}
-		
-		public CepRequest build() {
-			
-			CepRequest request = new CepRequest();
-			request.setsCep(sCep);
-			
-			return request;
-		}
-	}
 }

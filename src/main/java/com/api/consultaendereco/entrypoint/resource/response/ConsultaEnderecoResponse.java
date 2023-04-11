@@ -80,5 +80,12 @@ public class ConsultaEnderecoResponse {
 	public void setFrete(Double bFrete) {
 		this.bFrete = bFrete;
 	}
+	public String getsAlerta() {
+		return sAlerta;
+	}
+	public void setsAlerta(String sAlerta) {
+		this.sAlerta = sAlerta;
+	}
+	
 
 }
