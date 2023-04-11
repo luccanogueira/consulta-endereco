@@ -81,4 +81,9 @@ public class ConsultaEnderecoResponse {
 		this.bFrete = bFrete;
 	}
 
+	public String getsAlerta() {
+		return sAlerta;
+	}
+	
+
 }
