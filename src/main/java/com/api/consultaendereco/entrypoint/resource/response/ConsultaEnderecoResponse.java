@@ -86,11 +86,5 @@ public class ConsultaEnderecoResponse {
 	public void setsAlerta(String sAlerta) {
 		this.sAlerta = sAlerta;
 	}
-	
-
-	public String getsAlerta() {
-		return sAlerta;
-	}
-	
 
 }
