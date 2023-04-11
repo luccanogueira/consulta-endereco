@@ -13,6 +13,14 @@ public class ConsultaEnderecoClient {
 		
 		String url = "https://viacep.com.br/ws/" + cep + "/json";
 		
-		return template.getForEntity(url, ConsultaResponse.class).getBody();
+		try {
+			return template.getForEntity(url, ConsultaResponse.class).getBody();
+		} catch (Exception e) {
+			ConsultaResponse response = new ConsultaResponse();
+			response.setbErro(true);
+			
+			return response;
+		}
+		
 	}
 }
