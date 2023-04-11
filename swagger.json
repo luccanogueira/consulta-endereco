@@ -1,0 +1,91 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/consulta-endereco": {
+      "post": {
+        "tags": [
+          "consulta-endereco-recurso"
+        ],
+        "description": "Faz a consulta do região via CEP e calcula o frete de envio.",
+        "operationId": "conulta",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CepRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Retorna uma mensagem informativa caso o CEP não exista.",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsultaEnderecoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CepRequest": {
+        "required": [
+          "cep"
+        ],
+        "type": "object",
+        "properties": {
+          "cep": {
+            "type": "string"
+          }
+        }
+      },
+      "ConsultaEnderecoResponse": {
+        "type": "object",
+        "properties": {
+          "complemento": {
+            "type": "string"
+          },
+          "bairro": {
+            "type": "string"
+          },
+          "cep": {
+            "type": "string"
+          },
+          "rua": {
+            "type": "string"
+          },
+          "cidade": {
+            "type": "string"
+          },
+          "estado": {
+            "type": "string"
+          },
+          "frete": {
+            "type": "number",
+            "format": "double"
+          },
+          "alerta": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

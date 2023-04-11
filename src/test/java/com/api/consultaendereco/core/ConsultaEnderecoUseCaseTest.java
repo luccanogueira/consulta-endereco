@@ -12,6 +12,7 @@ import com.api.consultaendereco.dataprovider.gateway.response.ConsultaResponse;
 import com.api.consultaendereco.entrypoint.resource.request.CepRequest;
 import com.api.consultaendereco.entrypoint.resource.response.ConsultaEnderecoResponse;
 
+
 public class ConsultaEnderecoUseCaseTest {
     
     private ConsultaEnderecoUseCase useCase;
